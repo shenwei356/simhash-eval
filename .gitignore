@@ -1,0 +1,12 @@
+.directory
+.brename_detail.txt
+
+*.fa
+*.fasta
+*.tsv.gz
+*.tsv
+
+mem.pprof
+cpu.pprof
+
+Rplots.pdf
