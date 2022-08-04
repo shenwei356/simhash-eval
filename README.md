@@ -11,7 +11,7 @@ Reference:
 
 ### Distribution of subsitutions which result in same hashes.
 
-![](t.fna.simhash-k21-m5-s5-n1.tsv.gz.jpg)
+![](t.fna.simhash-k21-m5-s6-n1.tsv.gz.jpg)
 
 ### Steps
 
