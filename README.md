@@ -21,10 +21,13 @@ Reference:
     fs=t.fna
     
     k=21
-    m=5
-    s=6
     
-    time go run mutate.go $fs $k $m $s 1 | pigz -c > $fs.simhash-k$k-m$m-s$s-n1.tsv.gz
-    time go run mutate.go $fs $k $m $s 2 | pigz -c > $fs.simhash-k$k-m$m-s$s-n2.tsv.gz
+    for m in 4 5 6; do
+        for s in 4 5 6 7 8; do
+            go run mutate.go $fs $k $m $s 1 | pigz -c > $fs.simhash-k$k-m$m-s$s-n1.tsv.gz
+            go run mutate.go $fs $k $m $s 2 | pigz -c > $fs.simhash-k$k-m$m-s$s-n2.tsv.gz
+            
+            Rscript site-dist.R -k $k -m $m -s $s $fs.simhash-k$k-m$m-s$s-n1.tsv.gz $fs.simhash-k$k-m$m-s$s-n2.tsv.gz
+        done
+    done
     
-    Rscript site-dist.R -k $k -m $m -s $s $fs.simhash-k$k-m$m-s$s-n1.tsv.gz $fs.simhash-k$k-m$m-s$s-n2.tsv.gz

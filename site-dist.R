@@ -100,8 +100,7 @@ df22 <- df2p %>%
 
 p2 <- ggplot(df22, aes(mpos, mpos2)) +
     geom_point(aes(size = count, color = count)) +
-    scale_color_gradient_tableau(palette = "Orange") +
-    # , color = "#0072B2"
+    scale_color_gradient_tableau(palette = "Orange", guide = "legend") +
     scale_x_continuous(position = "top") +
     xlab("Position 1") +
     ylab("Position 2") +
@@ -109,7 +108,7 @@ p2 <- ggplot(df22, aes(mpos, mpos2)) +
          subtitle = paste0("K-mers with mutants of same hashes: ", round(pos2/total2*100,2), "%"),
          caption =  paste0("K=",args$k, ", m=", args$m, ", scale=", args$s, "\n"),
     ) +
-    guides(color = guide_legend(reverse = TRUE)) +
+    # guides(shape = guide_legend(reverse = TRUE)) +
     theme +
     theme(
         panel.grid.major = element_line(color = "grey80"),
