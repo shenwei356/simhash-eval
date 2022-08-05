@@ -47,8 +47,8 @@ theme <- theme_bw() +
         panel.grid.major = element_blank(),
         panel.grid.minor = element_blank(),
         
-        axis.text = element_text(colour = "grey10", size = 9),
-        axis.title = element_text(colour = "grey10", size = 11),
+        axis.text = element_text(colour = "grey10", size = 10),
+        axis.title = element_text(colour = "grey10", size = 12),
         
         axis.line = element_line(color = "grey10", size = 0.5),
         axis.ticks = element_line(size = 0.6),
@@ -58,17 +58,18 @@ theme <- theme_bw() +
             fill = "grey90",
             size = 0.2
         ),
-        strip.text.y = element_text(size = 9),
-        strip.text.x = element_text(size = 9),
+        strip.text = element_text(size = 10),
         
         legend.position = "right",
-        legend.text = element_text(size = 9),
+        legend.text = element_text(size = 10),
         legend.key.size = unit(0.4, "cm"),
-        legend.title = element_text(size = 10),
+        legend.title = element_text(size = 12),
         legend.margin = margin(0, 0, 0, 0, unit = "cm"),
         
-        text = element_text(size = 9),
-        plot.title = element_text(size = 14)
+        text = element_text(size = 10),
+        plot.title = element_text(size = 15),
+        plot.subtitle = element_text(size = 12),
+        plot.caption = element_text(size = 11),
     )
 
 df1p <- df1 %>% filter(status > 0)
@@ -83,7 +84,7 @@ p1 <- ggplot(df1p, aes(mpos)) +
     ylab("Count") +
     labs(title = "Single substitution", 
          subtitle = paste0("K-mers with mutants of same hashes: ", round(pos/total*100,2), "%"),
-         caption =  paste0("K=",args$k, ", m=", args$m, ", scale=", args$s, "\n"),
+         caption =  paste0("k=",args$k, ", m=", args$m, ", scale=", args$s, "\n"),
          ) +
     
     scale_x_continuous(expand = c(0, 0)) +
