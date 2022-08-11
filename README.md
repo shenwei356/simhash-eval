@@ -9,11 +9,17 @@ Reference:
 - [BLEND: A Fast, Memory-Efficient, and Accurate Mechanism to Find Fuzzy Seed Matches](https://arxiv.org/abs/2112.08687)
 - [Lightweight compositional analysis of metagenomes with FracMinHash and minimum metagenome covers](https://www.biorxiv.org/content/10.1101/2022.01.11.475838v2)
 
-### Distribution of subsitutions which result in same hashes.
+### Distribution of subsitutions which result in same hashes
 
 ![](t.fna.simhash-k21-m5-s5-n1.tsv.gz.jpg)
 ![](t.fna.simhash-k21-m5-s6-n1.tsv.gz.jpg)
 ![](t.fna.simhash-k21-m5-s7-n1.tsv.gz.jpg)
+
+<hr>
+
+![](t.fna.simhash-k21-m7-s3-n1.tsv.gz.jpg)
+![](t.fna.simhash-k21-m7-s5-n1.tsv.gz.jpg)
+![](t.fna.simhash-k21-m7-s7-n1.tsv.gz.jpg)
 
 ### Steps
 
